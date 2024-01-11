@@ -249,13 +249,13 @@ var app = angular.module('ASMSimulator', []);
                                         opCode = opcodes.MOV_ADDRESS_TO_REG;
                                     else if (p1.type === "register" && p2.type === "regaddress")
                                         opCode = opcodes.MOV_REGADDRESS_TO_REG;
-                                    else if (p1.type === "address" && p2.type === "register")
+                                    else if (p1.type === "number" && p2.type === "register")
                                         opCode = opcodes.MOV_REG_TO_ADDRESS;
                                     else if (p1.type === "regaddress" && p2.type === "register")
                                         opCode = opcodes.MOV_REG_TO_REGADDRESS;
                                     else if (p1.type === "register" && p2.type === "number")
                                         opCode = opcodes.MOV_NUMBER_TO_REG;
-                                    else if (p1.type === "address" && p2.type === "number")
+                                    else if (p1.type === "number" && p2.type === "number")
                                         opCode = opcodes.MOV_NUMBER_TO_ADDRESS;
                                     else if (p1.type === "regaddress" && p2.type === "number")
                                         opCode = opcodes.MOV_NUMBER_TO_REGADDRESS;
